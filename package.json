@@ -1,0 +1,28 @@
+{
+  "name": "mioprogetto",
+  "version": "1.0.0",
+  "private": true,
+  "description": "mio progetto finale",
+  "homepage": "https://github.com/Vanny996/ProgettoFinale#readme",
+  "bugs": {
+    "url": "https://github.com/Vanny996/ProgettoFinale/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vanny996/ProgettoFinale.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "joi": "^18.2.3",
+    "mongodb-memory-server": "^11.2.0",
+    "mongoose": "^9.7.4"
+  }
+}
