@@ -1,6 +1,6 @@
 import express from 'express';
 import checkAuthorizationMiddleware from '../middlewares/checkAuthorizationMiddleware.js';
-import { addPostValidator, updatePostValidator } from '../validators/postValidator.js';
+import { addPostValidator, updatePostValidator } from '../validator/PostValidator.js';
 import { createPost, listPosts, getPost, uploadPostImage, editPost, removePost } from '../controllers/postController/PostController.js';
 
 export class PostRoutes {
