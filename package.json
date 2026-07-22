@@ -13,10 +13,11 @@
   },
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
+  "type": "module",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha 'src/tests/**/*.js' --recursive --exit",
+    "test:coverage": "c8 --reporter=text --reporter=html mocha 'src/tests/**/*.js' --recursive --exit",
     "start": "node server.js"
   },
   "dependencies": {
@@ -31,6 +32,10 @@
     "mongoose": "^9.7.4",
     "multer": "^2.2.0",
     "nodemailer": "^9.0.3",
-    "sinon": "^22.0.0"
+    "sinon": "^22.0.0",
+    "socket.io": "^4.8.3"
+  },
+  "devDependencies": {
+    "mocha": "^11.7.6"
   }
 }

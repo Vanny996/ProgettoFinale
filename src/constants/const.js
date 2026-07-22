@@ -11,5 +11,5 @@ export const userStatus = {
     ARCHIVED: 'archived'
 };
 
-export const privateKey = readFileSync(join(__dirname, '../Jwt.key'), 'utf8');
-export const publicKey = readFileSync(join(__dirname, '../Jwt.key.pub'), 'utf8');
+export const privateKey = readFileSync(join(__dirname, '../../Jwt.key'), 'utf8');
+export const publicKey = readFileSync(join(__dirname, '../../Jwt.key.pub'), 'utf8');

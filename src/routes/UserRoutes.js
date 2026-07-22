@@ -1,4 +1,6 @@
 import { addUser, confirmRegistration, updateProfile }from'../controllers/userControllers/UserController.js';
+import { addUserValidator } from '../validator/addUserValidator.js';
+import{ confirmRegistrationValidator} from'../validator/confirmRegistrationValidator.js';
 import {loginValidator} from '../validator/loginValidator.js';
 import { login } from '../controllers/userControllers/UserController.js';
 import checkAuthorizationMiddleware from "../middlewares/checkAuthorizationMiddleware.js";
@@ -9,5 +11,6 @@ export class UserRoutes{
         router.get('/user/:id/confirm/:token',confirmRegistrationValidator, confirmRegistration);
         router.post('/user/login',loginValidator,login);
         router.put('/user/profile',checkAuthorizationMiddleware,updateProfileValidator,updateProfile);
+
     }
 }

@@ -2,9 +2,9 @@
 import express from 'express';
 import {registerRoutes}from'./src/routes/route.js';
 import {connect} from './dataBase.js';
+import {initSocket} from "./src/socket/socketManager.js";
+import * as http from "node:http";
 
-const host ='localhost';
-const port = 8004;
 const app = express();
 
 app.use(express.json());
@@ -12,6 +12,11 @@ registerRoutes(app);
 
 await connect()
 registerRoutes(app);
+
+const httpServer= http.createServer(app);
+initSocket(httpServer);
+const PORT = process.env.PORT || 8004;
+httpServer.listen(PORT, () => console.log(`server avviato localhost ${PORT}`));
 
 app.use((err, req, res, next) => {
     if (err?.error && err.error.isJoi) {
@@ -21,8 +26,5 @@ app.use((err, req, res, next) => {
     }
 });
 
-app.listen(port,host,()=>{
-    console.log(`server avviato ${host}:${port}`);
-})
 
 export default app;

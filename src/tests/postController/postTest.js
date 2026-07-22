@@ -7,7 +7,8 @@ import sinon from 'sinon';
 import cryptoUtils from "../../utils/cryptoUtils.js";
 import tagSchema from "../../schemas/tagSchema.js";
 import postSchema from "../../schemas/postSchema.js";
-
+import likeSchema from "../../schemas/likeSchema.js";
+import commentSchema from "../../schemas/commentSchema.js";
 
 const sandbox = sinon.createSandbox();
 chai.use(chaiHttp);

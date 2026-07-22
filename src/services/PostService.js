@@ -1,6 +1,6 @@
 import postRepo from "../repository/postRepository.js";
-import likeRepo from "../repository/likeRepository.js";
 import commentRepo from "../repository/commentRepository.js";
+import likeRepo from "../repository/likeRepository.js";
 
 export const addPost = async (content, authorId, imagePath) => {
     const tagIds = content.tags ? await postRepo.findOrCreateTags(content.tags) : [];

@@ -1,6 +1,7 @@
 import userRepo  from '../repository/userRepository.js';
 import cryptoUtils from '../utils/cryptoUtils.js';
 import UnauthorizedException from '../exceptions/UnauthorizedException.js';
+import mailService from "./mailService.js";
 
 export const add = async (content)=> {
     const {password,salt}= cryptoUtils.hashPassword(content.password);
