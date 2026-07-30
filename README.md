@@ -36,7 +36,7 @@ API REST per la gestione di un blog multiutente, con autenticazione JWT, gestion
 
    MONGO_URI=mongodb://localhost:27017/blog_multiutente
    JWT_SECRET=< ------->
-   PORT=8003
+   PORT=8004
    MAIL_SENDER=<email_mittente>
    MAIL_PASSWORD=<password_email>
 
@@ -52,14 +52,14 @@ API REST per la gestione di un blog multiutente, con autenticazione JWT, gestion
 npm start
 
 
-Il server sarà disponibile su http://localhost:8003 (o sulla porta indicata nel tuo .env).
+Il server sarà disponibile su http://localhost:8004 (o sulla porta indicata nel tuo .env).
 
 ## Documentazione API
 
 Una volta avviato il server, la documentazione interattiva Swagger è disponibile su:
 
 
-http://localhost:8003/api-docs
+http://localhost:8004/api-docs
 
 
 Da lì è possibile consultare tutti gli endpoint disponibili e testarli direttamente (incluso l'uso del pulsante *Authorize* per autenticarsi con un token JWT sugli endpoint protetti).
@@ -82,8 +82,6 @@ src/tests/
 ├── postController/      # Test CRUD post, tag, upload immagine
 ├── commentController/   # Test creazione/modifica/eliminazione commenti
 ├── likeController/       # Test like/unlike
-└── unit/                # Unit test (es. middleware di autenticazione)
-
 
 ## Struttura del progetto
 
