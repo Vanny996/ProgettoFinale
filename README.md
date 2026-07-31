@@ -9,7 +9,6 @@ API REST per la gestione di un blog multiutente, con autenticazione JWT, gestion
 - *Database*: MongoDB con Mongoose
 - *Autenticazione*: JWT (jsonwebtoken)
 - *Testing*: Mocha + Chai + Sinon + mongodb-memory-server
-- *Documentazione API*: Swagger/OpenAPI
 - *Validazione*: Joi (express-joi-validation)
 - *Upload immagini*: Multer
 
