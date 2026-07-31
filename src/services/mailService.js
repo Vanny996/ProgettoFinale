@@ -12,7 +12,7 @@ const transport = {
 class MailService {
     async sendRegistrationMail(user) {
         const userId = user._id ? user._id.toString() : user.id;
-        const link = `http://localhost:8003/user/${userId}/confirm/${encodeURIComponent(user.registrationToken)}`;
+        const link = `http://localhost:8004/user/${userId}/confirm/${encodeURIComponent(user.registrationToken)}`;
         const mailData = {
             from: ` "Progetto"<${mailConfig.sender}>`,
             to: user.email,

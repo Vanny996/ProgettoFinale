@@ -4,8 +4,6 @@ import mongoose from "mongoose";
 import postSchema from "../../schemas/postSchema.js";
 import tagSchema from "../../schemas/tagSchema.js";
 import commentSchema from "../../schemas/commentSchema.js";
-import {LikeRoutes} from "../../Routes/LikeRoutes.js";
-import LikeSchema from "../../schemas/likeSchema.js";
 import likeSchema from "../../schemas/likeSchema.js";
 
 const ObjectId = mongoose.Types.ObjectId;
